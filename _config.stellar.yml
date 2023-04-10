@@ -1,14 +1,53 @@
-footer:
-  social:
-    github:
-      icon: '<img src="/assets/placeholder/social/08a41b181ce68.svg"/>'
-      url: https://
-    music:
-      icon: '<img src="/assets/placeholder/social/3845874.svg"/>'
-      url: https://
-    unsplash:
-      icon: '<img src="/assets/placeholder/social/3616429.svg"/>'
-      url: https://
-    comments:
-      icon: '<img src="/assets/placeholder/social/942ebbf1a4b91.svg"/>'
-      url: https://
+article:
+  auto_cover: true
+  auto_excerpt: 200
+
+style:
+  color:
+    # 动态颜色（会根据明暗主题重设明度值，只用关心色相和饱和度即可）
+    background: 'hsl(212 16% 98%)' # 浅色背景颜色
+    block: 'hsl(212 8% 95%)' # 块背景颜色
+    code: 'hsl(14 100% 48%)' # 行内代码颜色
+    text: 'hsl(0 0% 20%)' # 文本颜色
+    # 主题色配置（不会根据明暗动态调整，请设置为通用的颜色）
+    theme: 'hsl(192 98% 55%)' # 主题色
+    accent: 'hsl(14 100% 57%)' # 强调色
+    link: 'hsl(207 90% 54%)' # 超链接颜色
+    button: 'hsl(192 98% 55%)' # 按钮颜色
+    hover: 'hsl(14 100% 57%)' # 按钮高亮颜色
+
+  text-align: left # justify/left/center/right
+  border-radius:
+    card: 12px # 卡片圆角
+    block: 12px # 块圆角
+    bar: 6px # 导航栏圆角
+    image: 6px # 图片圆角
+  scrollreveal:
+    enable: false
+    js: https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js
+    distance: 4px # 执行距离
+    duration: 400 # ms # 执行时长
+    interval: 100 # ms # 执行间隔（时间）
+    scale: 0.1 # 0.1~1 # 执行方式（缩放）
+  lazyload:
+    enable: true # [hexo clean && hexo s] is required after changing this value.
+    js: https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js
+    transition: blur # blur, fade
+  loading:
+    loading: 正在加载
+    error: 加载失败，请稍后重试。
+
+# footer:
+#   social:
+#     github:
+#       icon: '<img src="/assets/placeholder/social/08a41b181ce68.svg"/>'
+#       url: https://
+#     music:
+#       icon: '<img src="/assets/placeholder/social/3845874.svg"/>'
+#       url: https://
+#     unsplash:
+#       icon: '<img src="/assets/placeholder/social/3616429.svg"/>'
+#       url: https://
+#     comments:
+#       icon: '<img src="/assets/placeholder/social/942ebbf1a4b91.svg"/>'
+#       url: https://

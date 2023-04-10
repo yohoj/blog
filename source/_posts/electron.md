@@ -1,7 +1,7 @@
 ---
 title: electron 配置说明
 date: 2023-04-07 22:53:27
-tags: electron
+categories: [electron]
 ---
 ```json
 {

@@ -48,7 +48,7 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace: ''
-  wrap: true
+  wrap: false
   hljs: true
 prismjs:
   enable: false
@@ -106,3 +106,7 @@ deploy:
 
 aplayer:
   asset_inject: false # 禁止 aplayer 注入资源
+
+inject:
+  head:
+    - <link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/highlightjs/cdn-release@11.5.0/build/styles/atom-one-dark.min.css">
