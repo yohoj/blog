@@ -1,21 +1,21 @@
-# comments:
-  # service: giscus
+comments:
+  service: giscus
   # giscus
   # https://giscus.app/zh-CN
-  # giscus:
-  #   data-repo: yohoj/yooj.github.io
-  #   data-repo-id: R_kgDOHlXKwQ
-  #   data-category: General
-  #   data-category-id: DIC_kwDOHlXKwc4CT421
-  #   data-mapping: pathname
-  #   data-strict: 0
-  #   data-reactions-enabled: 1
-  #   data-emit-metadata: 0
-  #   data-input-position: top # top, bottom
-  #   data-theme: preferred_color_scheme
-  #   data-lang: zh-CN
-  #   data-loading: lazy
-  #   crossorigin: anonymous
+  giscus:
+    data-repo: yohoj/blog
+    data-repo-id: R_kgDOJNrrqw
+    data-category: General
+    data-category-id: DIC_kwDOJNrrq84CVuCm
+    data-mapping: pathname
+    data-strict: 0
+    data-reactions-enabled: 1
+    data-emit-metadata: 0
+    data-input-position: bottom # top, bottom
+    data-theme: preferred_color_scheme
+    data-lang: zh-CN
+    data-loading: lazy
+    crossorigin: anonymous
 
 search:
   service: local_search # local_search, todo...
