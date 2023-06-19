@@ -31,7 +31,7 @@
 <meta property="og:description" content="调用dll错误 DLL引用的路径错误，检查下DLL的路径是否正确  1Uncaught Error: Dynamic Linking Error: Win32 error 126 DLL位数不对,根据系统来确定使用x86还是x64,可通过os进行判断引入相应的DLL  1Uncaught Error: Dynamic Linking Error: Win32 error 193&lt;br&gt;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-07T15:13:49.000Z">
-<meta property="article:modified_time" content="2023-06-16T14:40:29.145Z">
+<meta property="article:modified_time" content="2023-06-19T08:29:47.775Z">
 <meta property="article:author" content="yohoj">
 <meta property="article:tag" content="前端,Laya,博客,Typescript,全站">
 <meta name="twitter:card" content="summary">
@@ -93,7 +93,7 @@
 <widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 
 
-<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">electron问题记录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E7%94%A8dll%E9%94%99%E8%AF%AF"><span class="toc-text">调用dll错误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%85%A5steam-sdk%E9%97%AE%E9%A2%98"><span class="toc-text">接入steam sdk问题</span></a></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">electron问题记录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E7%94%A8dll%E9%94%99%E8%AF%AF"><span class="toc-text">调用dll错误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%85%A5steam-sdk%E9%97%AE%E9%A2%98"><span class="toc-text">接入steam sdk问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%85%A5wegame-sdk%E9%97%AE%E9%A2%98"><span class="toc-text">接入wegame sdk问题</span></a></li></ol></div></div></widget>
 
 
 
@@ -126,6 +126,9 @@
 </ol>
 <h3 id="接入steam-sdk问题"><a href="#接入steam-sdk问题" class="headerlink" title="接入steam sdk问题"></a>接入steam sdk问题</h3><p>gameoverlayui 无法调用, 在主进程js文件中加入</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 解决steam overlay无效的问题</span></span><br><span class="line">app.<span class="property">commandLine</span>.<span class="title function_">appendSwitch</span>(<span class="string">&#x27;--in-process-gpu&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="接入wegame-sdk问题"><a href="#接入wegame-sdk问题" class="headerlink" title="接入wegame sdk问题"></a>接入wegame sdk问题</h3><p>打开一直白屏，需要在主进程js文件中加入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.commandLine.appendSwitch(&#x27;--no-sandbox&#x27;);</span><br></pre></td></tr></table></figure>
 
 
 
