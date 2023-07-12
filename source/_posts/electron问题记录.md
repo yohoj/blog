@@ -34,3 +34,28 @@ app.commandLine.appendSwitch('--in-process-gpu')
 ```
 app.commandLine.appendSwitch('--no-sandbox');
 ```
+
+### 调用alert后，input输入框无法聚焦
+解决方法：重写alert<br>
+在preload.js中增加如下代码
+```javascript
+const { ipcRenderer } = require('electron')
+window.alert = (str) => {
+    ipcRenderer.send("alert", str);
+}
+```
+main.js
+```javascript
+    const { ipcMain, dialog } = require('electron');
+    ipcMain.on("alert", (e, str) => {
+        var options = {
+        type: 'warning',
+        buttons: ["Ok"],
+        defaultId: 0,
+        cancelId:0,
+        detail:str,
+        message: ''
+        }
+        dialog.showMessageBoxSync(options)
+    });
+```
