@@ -31,7 +31,7 @@ app.commandLine.appendSwitch('--in-process-gpu')
 
 ### 接入wegame sdk问题
 打开一直白屏，需要在主进程js文件中加入
-```
+```javascript
 app.commandLine.appendSwitch('--no-sandbox');
 ```
 
