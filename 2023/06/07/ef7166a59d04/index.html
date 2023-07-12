@@ -31,7 +31,7 @@
 <meta property="og:description" content="调用dll错误 DLL引用的路径错误，检查下DLL的路径是否正确  1Uncaught Error: Dynamic Linking Error: Win32 error 126 DLL位数不对,根据系统来确定使用x86还是x64,可通过os进行判断引入相应的DLL  1Uncaught Error: Dynamic Linking Error: Win32 error 193&lt;br&gt;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-07T15:13:49.000Z">
-<meta property="article:modified_time" content="2023-07-12T08:40:21.768Z">
+<meta property="article:modified_time" content="2023-07-12T08:46:48.963Z">
 <meta property="article:author" content="yohoj">
 <meta property="article:tag" content="前端,Laya,博客,Typescript,全站">
 <meta name="twitter:card" content="summary">
@@ -128,7 +128,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 解决steam overlay无效的问题</span></span><br><span class="line">app.<span class="property">commandLine</span>.<span class="title function_">appendSwitch</span>(<span class="string">&#x27;--in-process-gpu&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 <h3 id="接入wegame-sdk问题"><a href="#接入wegame-sdk问题" class="headerlink" title="接入wegame sdk问题"></a>接入wegame sdk问题</h3><p>打开一直白屏，需要在主进程js文件中加入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.commandLine.appendSwitch(&#x27;--no-sandbox&#x27;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="property">commandLine</span>.<span class="title function_">appendSwitch</span>(<span class="string">&#x27;--no-sandbox&#x27;</span>);</span><br></pre></td></tr></table></figure>
 
 <h3 id="调用alert后，input输入框无法聚焦"><a href="#调用alert后，input输入框无法聚焦" class="headerlink" title="调用alert后，input输入框无法聚焦"></a>调用alert后，input输入框无法聚焦</h3><p>解决方法：重写alert<br><br>在preload.js中增加如下代码</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; ipcRenderer &#125; = <span class="built_in">require</span>(<span class="string">&#x27;electron&#x27;</span>)</span><br><span class="line"><span class="variable language_">window</span>.<span class="property">alert</span> = <span class="function">(<span class="params">str</span>) =&gt;</span> &#123;</span><br><span class="line">    ipcRenderer.<span class="title function_">send</span>(<span class="string">&quot;alert&quot;</span>, str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
