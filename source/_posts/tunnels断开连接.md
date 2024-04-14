@@ -1,7 +1,7 @@
 ---
-layout: post
 title: cloudflare tunnels status down
 date: 2024-04-14 15:22:34
+categories: [软路由]
 ---
 查看错误日志
 ```
