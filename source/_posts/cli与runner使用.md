@@ -1,6 +1,6 @@
 ---
-layout: gitlab
-title: cli与runner使用
+layout: post
+title: gitlab cli与runner使用
 date: 2023-04-13 21:37:53
 tags:
 categories: [gitlab, runner, cli]
