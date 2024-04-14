@@ -6,7 +6,7 @@ date: 2024-04-14 17:23:43
 ---
 由于cloudflare tunnels的容器走代理一直连不上，需要将其直连。<br>
 ## 1.clash运行环境
-![alt text](./open-clash-设置代理/image.png)
+![alt text](./image.png)
 ## 2.修改配置文件
 覆写设置->规则设置->自定义规则打勾如下图
 然后在下面文本框增加
@@ -14,7 +14,7 @@ date: 2024-04-14 17:23:43
 - SRC-IP-CIDR,172.17.0.5/32,DIRECT
 ```
 其中172.17.0.5是容器的ip
-![alt text](./open-clash-设置代理/image-1.png)
+![alt text](./image-1.png)
 最后点保存配置，应用配置<br>
 ## 3.最终效果
 在clash日志中看到容器都走直连了
